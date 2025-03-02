@@ -2,11 +2,7 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div>
-        <h1 class="text-3xl flex items-center justify-center mt-15 font-bold">
-    Hello world!
-  </h1>
-    </div>
+    <div className="text-center text-5xl mt-25 text-green-600 font-medium">Hello World</div>
   )
 }
 
