@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div className='text-center text-5xl mt-25 text-green-600 font-medium'>
-      Hello World
+      <h1>My nane is Baiel</h1>
     </div>
   )
 }
