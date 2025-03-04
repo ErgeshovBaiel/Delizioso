@@ -1,13 +1,13 @@
-  
+import React from 'react'
+// import Reservation from './pages/reservation/Reservation';
 
-  import React from 'react'
-import ReservationForm from './components/reservationForm/ReservationForm';
-  
-  export const App = () => {
-    return (
-      <ReservationForm/>
-    )
-  }
-    
 
-  export default App;
+const App = () => {
+  return ( 
+       <h1>NAzik</h1>
+    // <Reservation/>
+  )
+}
+
+
+export default App;
