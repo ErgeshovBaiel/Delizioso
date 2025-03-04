@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { supabase } from './supabase'
+import  Header  from './components/header/Header'
 
 const App = () => {
   const getData = async () => {
@@ -13,8 +14,8 @@ const App = () => {
   }, [])
 
   return (
-    <div className='text-center text-5xl mt-25 text-green-600 font-medium'>
-      <h1>My nane is Baiel</h1>
+    <div className='flex items-center justify-center'>
+      <Header />
     </div>
   )
 }
