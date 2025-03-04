@@ -14,10 +14,6 @@ const App = () => {
 
   return (
     <div className='text-center text-5xl mt-25 text-green-600 font-medium'>
-      <img
-        src='https://drive.google.com/file/d/103iL6RPrqReDP6KoIn8iTxBKtwXXiEgu/view?usp=drive_link'
-        alt='lll'
-      />
       Hello World
     </div>
   )
