@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { supabase } from './supabase'
 import  Header  from './components/header/Header'
+import Hero from './components/hero/Hero'
 
 const App = () => {
   const getData = async () => {
@@ -14,8 +15,9 @@ const App = () => {
   }, [])
 
   return (
-    <div className='flex items-center justify-center'>
+    <div>
       <Header />
+      <Hero />
     </div>
   )
 }
