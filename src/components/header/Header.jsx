@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
   return (
     <div className='w-full h-30 fixed top-0 left-0 z-50 bg-white shadow-md'>
-      <div className='container mx-auto px-4 h-full'>
-        <div className='w-312.5 m-auto pt-7.5'>
+      <div className='mx-auto px-4 h-full'>
+        <div className='app-container pt-7.5'>
           <div className='flex items-center justify-between h-full'>
             <div className='flex items-center gap-4'>
               <div className='w-12 h-12 rounded-full bg-[#FF8A00] flex items-center justify-center'>

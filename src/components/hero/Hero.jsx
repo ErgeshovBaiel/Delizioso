@@ -2,8 +2,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className='w-360 m-auto mt-35'>
-      <div className='w-312.5 m-auto flex gap-45'>
+      <div className='app-container relative top-25 flex gap-45'>
         <div>
           <div className='mt-25 w-[153px] h-[41px] rounded-full bg-[#fae0c1]'>
             <button className='w-[84px] h-[20px] text-[#FF8A00] text-[18px] font-[Raleway] pl-8.5 pt-5 font-normal leading-[11%]'>
@@ -39,7 +38,6 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
   )
 }
 
