@@ -15,9 +15,6 @@ const App = () => {
 
   return (
     <div>
-      <h1 class="text-3xl flex items-center text-[red] justify-center mt-15 font-bold">
-        Uuljan
-      </h1>
       <CategoryFood />
     </div>
   )
