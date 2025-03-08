@@ -2,8 +2,8 @@ const CategoryButton = ({ selectedCategory, category, onClick }) => {
     return (
         <button
             className={`
-                w-[232px] 
-                h-[54px] 
+                py-[17px]
+                px-[60px]
                 rounded-full 
                 text-lg 
                 font-semibold 

@@ -1,5 +1,5 @@
 import React from 'react'
-import CategoryFood from '../../category/CategoryFood'
+import CategoryFood from '../../components/category/CategoryFood'
 import CategoryButton from '../../components/CategoryButton/CategoryButton'
 
 const Menu = () => {

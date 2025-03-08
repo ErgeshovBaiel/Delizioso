@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { supabase } from "../supabase";
-import CategoryButton from "../components/CategoryButton/CategoryButton";
+import { supabase } from "../../supabase";
+import CategoryButton from "../CategoryButton/CategoryButton";
 
 export default function CategoryFood() {
-    const [selectedCategory, setSelectedCategory] = useState("All");
+    const [selectedCategory, setSelectedCategory] = useState("All catagory");
     const [categories, setCategories] = useState([]);
     const [foods, setFoods] = useState([]);
     const [selected, setSelected] = useState(null);
@@ -22,15 +22,17 @@ export default function CategoryFood() {
                 const { data: lunch } = await supabase.from("lunch").select("*");
                 data = [...lunch];
             } else if (category === "Drink") {
-                const { data: drink } = await supabase.from("drink").select("*");
+                const { data: drink } = await supabase.from("juice").select("*");
                 data = [...drink];
             } else {
                 const { data: pasta } = await supabase.from("pasta").select("*");
                 const { data: pizza } = await supabase.from("pizza").select("*");
                 const { data: desserts } = await supabase.from("desserts").select("*");
-                const { data: lunch } = await supabase.from("lunch").select("*");
-                data = [...pasta, ...pizza, ...desserts, ...lunch];
+                // const { data: lunch } = await supabase.from("lunch").select("*");
+                data = [...pasta, ...pizza, ...desserts,];
             }
+            console.log(data, '----');
+
             setFoods(data);
         } catch (error) {
             console.error("Ошибка при получении еды:", error);
@@ -48,12 +50,12 @@ export default function CategoryFood() {
             }
         };
         fetchData();
-        getFoods("All"); 
+        getFoods();
     }, []);
 
-  
+
     const handleCategoryChange = (category) => {
-        console.log(`Категория изменена на: ${category}`); 
+        console.log(`Категория изменена на: ${category}`);
         setSelectedCategory(category);
         getFoods(category);
     };
@@ -62,11 +64,11 @@ export default function CategoryFood() {
         <div className="min-h-screen flex flex-col items-center p-4">
             <h1 className="text-3xl font-extrabold mb-4 text-[#311F09]">Menu</h1>
 
-            <div className="flex flex-wrap justify-center gap-2 mb-4">
-                {["All", ...categories.map((cat) => cat.name)].map((category) => (
+            <div className="flex flex-wrap justify-center gap-[27px] mb-4">
+                {["All catagory", ...categories.map((cat) => cat.name)].map((category) => (
                     <CategoryButton
                         key={category}
-                        onClick={() => handleCategoryChange(category)} 
+                        onClick={() => handleCategoryChange(category)}
                         selectedCategory={selectedCategory}
                         category={category}
                     />
@@ -75,9 +77,9 @@ export default function CategoryFood() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl">
                 {foods.length > 0 ? (
-                    foods.map((food) => (
+                    foods.map((food, i) => (
                         <div
-                            key={food.id}
+                            key={food.id + "-" + i}
                             onClick={() => setSelected(food.id)}
                             className={`w-[240px] rounded-[20px] shadow-lg p-4 flex flex-col items-center transition-all cursor-pointer hover:scale-105 ${selected === food.id ? "bg-[#FF8A00] text-white" : "bg-white text-gray-900"}`}
                         >

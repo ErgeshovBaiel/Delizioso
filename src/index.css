@@ -3,23 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    border: none;
-    list-style: none;
-    text-decoration: none;
-  }
-  
-  .app-container {
-    width: 1200px;
-    margin: auto;
-    border: 1px solid red;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
+body {
+  padding-top: 120px;
+}
+.app-container {
+  width: 1112px;
+  margin: auto;
+  border: 1px solid red;
+}
