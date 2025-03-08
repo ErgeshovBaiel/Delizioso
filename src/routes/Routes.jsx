@@ -21,6 +21,6 @@ export const menu = [
         path: "/menu",
         element: <Menu />
       }
-    ]
+    ]  
   }
 ];
