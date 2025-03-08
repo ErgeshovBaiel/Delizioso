@@ -1,0 +1,139 @@
+.buttonblue {
+    background: #baf2ff;
+    border: none;
+    color: rgb(85, 84, 84);
+    width: 992px;
+    height: 123px;
+    border-radius: 20px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 55px;
+    margin-top: 50px;
+}
+
+.blue {
+    color: #000000;
+    font-weight: 700;
+
+}
+
+.h1 {
+    text-align: center;
+    width: 410;
+    height: 92;
+    font-weight: 700;
+    font-size: 80px;
+
+
+
+}
+
+.input {
+    width: 475px;
+    height: 100px;
+    border-radius: 10px;
+    background: #D0CCC7;
+    font-size: 18px;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-weight: 400;
+
+
+}
+
+h2 {
+    margin-left: 50px;
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.image {
+    width: 48px;
+    height: 48px;
+    // position: absolute;
+    // margin-left: 20px;
+    margin-right: 80px
+}
+
+
+.phoneContainer {
+    display: flex;
+    align-items: center;
+    // gap: 10px; 
+    // margin-top: 20px; 
+    text-align: center;
+}
+
+
+.phone {
+    text-align: center;
+}
+
+.button2 {
+    width: 152px;
+    height: 70px;
+    background: #FFFFFF;
+    position: absolute;
+    border-radius: 10px;
+
+}
+
+
+.card {
+    width: 429px;
+    height: 300px;
+    border-radius: 20px;
+    background: url('data:image/svg+xml;utf8,<svg width="429" height="300" viewBox="0 0 429 300" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.1" d="M0 20C0 8.9543 8.95431 0 20 0H409C420.046 0 429 8.95431 429 20V280C429 291.046 420.046 300 409 300H20C8.95432 300 0 291.046 0 280V20Z" fill="%23D0CCC7"/></svg>') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 600px;
+}
+
+
+
+
+.h22 {
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+
+p {
+    font-weight: 400;
+    font-size: 20px;
+    color: #5C4529;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin:auto;
+    font-weight: 400;
+    font-size: 20px;
+    color: #5C4529;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    margin-left: 30px;
+
+}
+
+p img {
+    width: 24px;
+    /* Adjust icon size */
+    height: 24px;
+}
+
+/* Adjusting specific images */
+.Kalendar,
+.Time,
+.Adam {
+    margin-right: 10px;
+    /* Uniform spacing */
+}
