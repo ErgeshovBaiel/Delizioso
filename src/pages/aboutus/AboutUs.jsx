@@ -1,8 +1,11 @@
 import React from 'react'
+import Restautant from '../../components/restautant/Restautant'
 
 const AboutUs = () => {
   return (
-    <div>AboutUs</div>
+    <div>
+      <Restautant />
+    </div>
   )
 }
 

@@ -1,11 +1,15 @@
-// store.js
-import { configureStore } from '@reduxjs/toolkit';
-import reservationReducer from './slice/reservationSlice';  
+import { createStore } from 'redux';
 
-const store = configureStore({
-  reducer: {
-    reservation: reservationReducer,  
-  },
-});
+const initialState = {
+};
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+const store = createStore(reducer);
 
 export default store;

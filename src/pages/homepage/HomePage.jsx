@@ -1,8 +1,17 @@
 import React from 'react'
+import Hero from '../../components/hero/Hero'
+import Food from '../../components/food/Food'
+import Table from '../../components/table/Table'
+import Open from '../../components/open/Open'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+      <Hero />
+      <Food />
+      <Table />
+      <Open />
+    </div>
   )
 }
 
