@@ -13,9 +13,10 @@
     text-decoration: none;
   }
   
-  .container {
+  .app-container {
     width: 1200px;
     margin: auto;
+    border: 1px solid red;
   }
   
   .text-center {

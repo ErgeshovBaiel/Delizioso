@@ -4,7 +4,7 @@ import CategoryButton from '../../components/CategoryButton/CategoryButton'
 
 const Menu = () => {
   return (
-    <div>
+    <div className='app-container'>
       <CategoryFood />
       <CategoryButton />
     </div>
