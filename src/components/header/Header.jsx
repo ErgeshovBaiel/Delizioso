@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-import { NavLink } from 'react-router-dom';  // NavLink импорттолуучу жер
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (

@@ -16,6 +16,6 @@ export const menu = [
         path: "/about-us",
         element: <AboutUs />
       }
-    ]
+    ]  
   }
 ];
