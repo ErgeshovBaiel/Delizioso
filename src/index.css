@@ -3,30 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 
-*{
-  margin: 0;
-  padding: 0; 
-  box-sizing: border-box;
-}
-
-/* .container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.app-container{
   width: 1112px;
   margin: auto;
-  
-  
-  
-  
-} */
-
-.container1{
-  width: 1112px;
-  margin: auto;
-  /* border: 1px solid black; */
-  height: 2065px;
-  display: flex;
-  justify-content: space-between;
+  /* border: 1px solid red; */
 }
-

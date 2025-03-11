@@ -6,7 +6,7 @@ import Open from '../../components/open/Open'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='app-container'>
       <Hero />
       <Food />
       <Table />

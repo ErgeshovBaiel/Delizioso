@@ -120,11 +120,111 @@
 // };
 
 // export default Reservation;
+// ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+// import React, { useState } from "react";
+// import Styles from "./Reservation.module.scss";
+// import Image from "../../assets/image copy 2.png";
+
+// const dates = ["March 6", "March 7", "March 8", "March 9", "March 10"];
+// const times = ["12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "7:00 PM", "7:30 PM", "8:00 PM"];
+// const partySizes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const Reservation = () => {
+//   const [date, setDate] = useState("");
+//   const [time, setTime] = useState("");
+//   const [partySize, setPartySize] = useState("");
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     if (!date || !time || !partySize) {
+//       alert("Please fill in all fields");
+//       return;
+//     }
+//     console.log("Reservation Details:", { date, time, partySize });
+//     alert("Table booked successfully!");
+//   };
+
+//   return (
+//     <div className="app-container">
+//       <div className={Styles.reservationImage}>
+//         <img src={Image} alt="Restaurant table" />
+//       </div>
+
+//       <div className={Styles.reservationForm}>
+//         <h1>Book a table</h1>
+//         <form className={Styles.form} onSubmit={handleSubmit}>
+          
+//           <div className={Styles.inputGroup}>
+//             <label htmlFor="date-select"></label>
+//             <select 
+//             className={Styles.select}
+//               id="date-select"
+//               value={date}
+//               onChange={(e) => setDate(e.target.value)}
+//             >
+//               <option value=""> Date </option>
+//               {dates.map((d) => (
+//                 <option key={d} value={d}>
+//                   {d}
+//                 </option>
+//               ))}
+//             </select>
+//           </div>
+
+//           <div className={Styles.inputGroup}>
+//             <label htmlFor="time-select"></label>
+//             <select 
+//              className={Styles.selec1}
+//               id="time-select"
+//               value={time}
+//               onChange={(e) => setTime(e.target.value)}
+//             >
+//               <option className={Styles.red} value=""> Time</option>
+//               {times.map((t) => (
+//                 <option key={t} value={t}>
+//                   {t}
+//                 </option>
+//               ))}
+//             </select>
+//           </div>
+
+//           <div className={Styles.inputGroup}>
+//             <label htmlFor="party-size-select"></label>
+//             <select
+//              className={Styles.select2}
+//               id="party-size-select"
+//               value={partySize}
+//               onChange={(e) => setPartySize(e.target.value)}
+//             >
+//               <option value=""> Party Size </option>
+//               {partySizes.map((size) => (
+//                 <option key={size} value={size}>
+//                   {size}
+//                 </option>
+//               ))}
+//             </select>
+//           </div>
+
+//           <button className={Styles.button} type="submit">
+//             Book now
+//           </button>
+//         </form>
+//       </div>
+      
+//     </div>
+
+
+
+//   );
+// };
+
+// export default Reservation;
 
 
 import React, { useState } from "react";
-import Styles from "./Reservation.module.scss";
-import Image from "../../assets/image copy 2.png";
+// import Styles from "./Reservation.module.scss";
+import Image from "../../assets/image copy 7.png"
 
 const dates = ["March 6", "March 7", "March 8", "March 9", "March 10"];
 const times = ["12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "7:00 PM", "7:30 PM", "8:00 PM"];
@@ -146,22 +246,26 @@ const Reservation = () => {
   };
 
   return (
-    <div className="container">
-      <div className={Styles.reservationImage}>
-        <img src={Image} alt="Restaurant table" />
+    <div className="app-container mx-auto flex">
+     
+      <div className=" mt-20">
+        <img src={Image} alt="Restaurant table" className="w-[600px] relative left-[-120px]" />
       </div>
 
-      <div className={Styles.reservationForm}>
-        <h1>Book a table</h1>
-        <form onSubmit={handleSubmit}>
-          <div className={Styles.inputGroup}>
-            <label htmlFor="date-select"></label>
-            <select
+      <div className="reservationForm max-w-[400px] mx-auto">
+        <h1 className="text-6xl font-bold text-[#311F09] text-center mb-8">
+          Book a table
+        </h1>
+
+        <form className="form flex flex-col gap-6 mt-40 ml-[-20px]">
+          <div className="relative w-[475px] mx-auto">
+            <select 
+              className="w-full h-[100px] rounded-xl bg-[#FBF9F9] text-xl font-normal pl-4 text-[#A0978C]"
               id="date-select"
               value={date}
               onChange={(e) => setDate(e.target.value)}
             >
-              <option value=""> Date </option>
+              <option value="">Date</option>
               {dates.map((d) => (
                 <option key={d} value={d}>
                   {d}
@@ -170,14 +274,14 @@ const Reservation = () => {
             </select>
           </div>
 
-          <div className={Styles.inputGroup}>
-            <label htmlFor="time-select"></label>
-            <select 
+          <div className="relative w-[475px] mx-auto">
+            <select
+              className="w-full h-[100px] rounded-xl bg-[#FBF9F9] text-xl font-normal pl-4 text-[#A0978C]"
               id="time-select"
               value={time}
               onChange={(e) => setTime(e.target.value)}
             >
-              <option className={Styles.red} value=""> Time</option>
+              <option value=""> Time</option>
               {times.map((t) => (
                 <option key={t} value={t}>
                   {t}
@@ -186,14 +290,14 @@ const Reservation = () => {
             </select>
           </div>
 
-          <div className={Styles.inputGroup}>
-            <label htmlFor="party-size-select"></label>
+          <div className="relative w-[475px] mx-auto">
             <select
+              className="w-full h-[100px] rounded-xl bg-[#FBF9F9] text-xl font-normal pl-4 text-[#A0978C]"
               id="party-size-select"
               value={partySize}
               onChange={(e) => setPartySize(e.target.value)}
             >
-              <option value=""> Party Size </option>
+              <option  value=""> Party Size</option>
               {partySizes.map((size) => (
                 <option key={size} value={size}>
                   {size}
@@ -202,16 +306,15 @@ const Reservation = () => {
             </select>
           </div>
 
-          <button className={Styles.button} type="submit">
-            Book now
+          <button
+            className="w-[475px] h-[80px] mt-6 rounded-xl bg-[#FF8A00] text-white text-xl font-semibold"
+            type="submit"
+          >
+            Book Now
           </button>
         </form>
       </div>
-      
     </div>
-
-
-
   );
 };
 
