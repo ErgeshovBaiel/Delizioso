@@ -8,17 +8,18 @@ const Header = () => {
   return (
     <div className='w-full fixed top-0 left-0 z-50 bg-white shadow-md'>
       <div className='max-w-[1200px] mx-auto px-4 h-25 flex items-center justify-between'>
-        <div className='flex items-center gap-4'>
-          <div className='w-12 h-12 rounded-full bg-[#FF8A00] flex items-center justify-center'>
-            <h1 className='text-white text-2xl font-semibold'>D</h1>
+        <div className='flex items-center gap-4.5'>
+          <div className='w-12.75 h-12.75 rounded-full bg-[#FF8A00] flex items-center justify-center'>
+            <h1 className='w-4.5 h-9.5 text-white text-[25px] font-semibold font-[Poppins] pl-0.5'>D</h1>
           </div>
-          <h2 className='font-semibold text-lg'>
+          <h2 className='font-semibold  font-[Poppins]  text-sm leading-[100%]'>
             Delizi<span className='text-[#FF8A00]'>oso</span>
           </h2>
         </div>
-        <ul className='hidden lg:flex gap-10 font-medium'>
+        <ul className='hidden lg:flex gap-11.25'>
           {['Home', 'Menu', 'About us', 'Order online', 'Reservation', 'Contact us'].map((item, index) => (
-            <li key={index} className='cursor-pointer hover:text-[#FF8A00] transition'>
+            <li key={index} className='cursor-pointer hover:text-[#FF8A00] text-[#311F09] font-[Poppins]
+             font-normal text-[14px]  transition leading-[100%]'>
               <NavLink 
                 to={`/${item.toLowerCase().replace(' ', '-')}`} 
                 className={({ isActive }) => isActive ? 'text-[#FF8A00]' : ''}
@@ -53,8 +54,8 @@ const Header = () => {
               </NavLink>
             </li>
           ))}
-          <div className='w-28 h-12 rounded-full bg-[#3FA72F] flex items-center justify-center mt-2'>
-            <h2 className='text-white font-semibold'>Log in</h2>
+          <div className='w-28 h-12.5 rounded-full bg-[#3FA72F] flex items-center justify-center'>
+            <h2 className='w-10.25 h-5.25 font-[Poppins] font-semibold text-sm leading-[100%]'>Log in</h2>
           </div>
         </ul>
       )}
