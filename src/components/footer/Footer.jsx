@@ -75,6 +75,7 @@ const Footer = () => {
               </div>
             </div>
 
+
             <div>
               <h3 className='w-[154px] h-[50px] font-[Poppins] font-semibold text-[25px] leading-[200%] text-[#FF8A00]'>
                 Get in touch

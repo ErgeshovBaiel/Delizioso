@@ -1,6 +1,7 @@
 import Layout from "../components/layout/Layout";
 import AboutUs from "../pages/aboutus/AboutUs";
 import HomePage from "../pages/HomePage/HomePage";
+import Menu from "../pages/menu/Menu";
 
 export const menu = [
   {
@@ -13,9 +14,17 @@ export const menu = [
         element: <HomePage />
       },
       {
-        path: "/about-us",
+        path: "home",
+        element: <HomePage />
+      },
+      {
+        path: "about-us",
         element: <AboutUs />
+      },
+      {
+        path: "menu",
+        element: <Menu />
       }
-    ]  
+    ]
   }
 ];
