@@ -55,7 +55,7 @@ const Header = () => {
             </li>
           ))}
           <div className='w-28 h-12.5 rounded-full bg-[#3FA72F] flex items-center justify-center'>
-            <h2 className='w-10.25 h-5.25 font-[Poppins] font-semibold text-sm leading-[100%]'>Log in</h2>
+            <h2 className='font-[Poppins] font-semibold text-sm leading-[100%] text-white'>Log in</h2>
           </div>
         </ul>
       )}
