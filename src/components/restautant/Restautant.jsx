@@ -78,4 +78,75 @@ const Restautant = () => {
   )
 }
 
-export default Restautant
+
+
+
+const Restaurant = () => {
+  return (
+    <div className='max-w-7xl mx-auto px-4'>
+      <div className='flex flex-wrap items-center justify-center lg:justify-between'>
+        <div className='relative w-full lg:w-[500px] h-[500px] rounded-full bg-[#efefeef5] flex items-center justify-center'>
+          <div className='w-[400.72px] h-[400.72px] bg-[#ecebe8] rounded-full flex items-center justify-center'>
+            <img
+              className='w-[310.31px] h-[310.31px] rounded-full object-cover'
+              src='https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_66c727d76724a47dade1ce15_66c7299440e6066f40bae2f4/scale_1200'
+              alt='Restaurant Interior'
+            />
+          </div>
+        </div>
+        <div className='lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0'>
+          <h2 className='text-[#311F09] text-4xl md:text-6xl font-[Tinos] font-bold'>
+            <span className='text-[#FF8A00]'>Our</span> restaurant
+          </h2>
+          <p className='mt-6 text-lg text-[#5C4529] leading-relaxed text-[30px]'>
+            If you are referring to booking a table at your restaurant, you will probably want to set up a reservation
+            system either through your restaurant's website, by phone, or through third-party services such as OpenTable.
+          </p>
+        </div>
+      </div>
+
+      <div className='flex flex-wrap-reverse items-center justify-center lg:justify-between mt-20'>
+        <div className='lg:w-1/2 text-center lg:text-left'>
+          <p className='mt-6 text-lg text-[#5C4529] text-[30px] leading-relaxed'>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit.
+          </p>
+        </div>
+        <div className='relative w-full lg:w-[500px] h-[500px] rounded-full bg-[#efefeef5] flex items-center justify-center'>
+          <div className='w-[400.82px] h-[400.82px] bg-[#ecebe8] rounded-full flex items-center justify-center'>
+            <img
+              className='w-[350.95px] h-[350.95px] rounded-full object-cover'
+              src='https://static.kinoafisha.info/upload/articles/585985332975.jpg'
+              alt='Restaurant Dish'
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className='flex flex-wrap items-center justify-center lg:justify-between mt-20'>
+        <div className='w-full lg:w-1/2 h-[500px]'>
+          <img
+            className='w-[1085px] h-[690px] t-[1918px]  object-cover'
+            src='https://lucenotte.com/static/media/executiveChef.a6e6568f51eb35736134.webp'
+            alt='Owner Image'
+          />
+        </div>
+        <div className='lg:w-1/3 text-center  lg:text-left mt-10 lg:mt-0 '>
+          <h2 className='text-[#311F09] text-4xl md:text-6xl font-[Tinos] font-bold'>
+            <span className='text-[#FF8A00]'>Owner</span> & Executive Chef
+          </h2>
+          <h3 className='text-2xl md:text-4xl font-semibold text-black mt-4'>Ismail Marzuki</h3>
+          <p className='mt-6 text-lg text-[#5C4529] italic leading-relaxed'>
+            Ismail Marzuki is a well-known Indonesian chef, but he has not received widespread international recognition.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Restaurant
+
