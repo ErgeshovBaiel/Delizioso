@@ -1,4 +1,3 @@
-// reservationSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const reservationSlice = createSlice({

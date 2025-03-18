@@ -1,0 +1,105 @@
+.customers-container {
+    width: 100%;
+    height: auto;
+    background: #fbfafa;
+    padding: 20px;
+  }
+  
+  .customers-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    top: 25px;
+  }
+  
+  .customers-title {
+    width: 650px;
+    height: 160px;
+    font-family: 'Tinos', serif;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 200%;
+    color: #311F09;
+    text-align: center;
+  }
+  
+  .customers-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  
+  .worker-card {
+    text-align: center;
+  }
+  
+  .worker-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .worker-name {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 35px;
+  }
+  
+  .worker-info {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+  }
+  
+  .worker-description {
+    width: 400px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+  }
+  
+  .decoration-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+  
+  /* Адаптивдик стилдер */
+  @media (max-width: 768px) {
+    .customers-title {
+      font-size: 50px;
+      width: 100%;
+      height: auto;
+    }
+  
+    .customers-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .worker-description {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .customers-title {
+      font-size: 40px;
+    }
+  
+    .worker-name {
+      font-size: 25px;
+    }
+  
+    .worker-info {
+      font-size: 18px;
+    }
+  
+    .worker-description {
+      font-size: 16px;
+    }
+  }

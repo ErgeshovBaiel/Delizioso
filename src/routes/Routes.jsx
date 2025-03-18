@@ -14,10 +14,6 @@ export const menu = [
         element: <HomePage />
       },
       {
-        path: "home",
-        element: <HomePage />
-      },
-      {
         path: "about-us",
         element: <AboutUs />
       },

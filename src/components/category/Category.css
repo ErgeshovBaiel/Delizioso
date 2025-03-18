@@ -1,0 +1,136 @@
+.category-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 164px;
+  }
+  
+  .title {
+    font-size: 80px;
+    font-weight: bold;
+    color: #311F09;
+    text-align: center;
+  }
+  
+  .category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin: 75px 0;
+  }
+
+  .food-content {
+    position: relative;
+    top: 15px;
+  }
+
+  .food-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+    margin-bottom: 200px;
+  }
+  
+  .food-item {
+    width: 350px;
+    height: 640px;
+    background: #f6f5f4;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.8s;
+    cursor: pointer;
+  }
+  
+  .food-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .food-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .food-name {
+    font-size: 30px;
+    font-weight: 600;
+    color: #311F09;
+    text-align: center;
+  }
+  
+  .food-description {
+    font-size: 14px;
+    color: #59442B;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .food-price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .order-button {
+    width: 156px;
+    height: 55px;
+    border-radius: 50px;
+    background: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .order-button:hover {
+    background: darkorange;
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 50px;
+    }
+  
+    .food-item {
+      width: 100%;
+      height: auto;
+    }
+  
+    .food-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 40px;
+    }
+  
+    .category-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .food-item {
+      width: 100%;
+      height: auto;
+    }
+  
+    .food-image {
+      width: 100%;
+      height: auto;
+    }
+  }
