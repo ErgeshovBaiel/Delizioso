@@ -35,7 +35,7 @@ const HomePage = () => {
   }
 
   return (
-    <div>
+    <div className='app-container'>
       <Hero />
       <Food />
       <Category />
