@@ -38,7 +38,7 @@ const ContactUs = () => {
               placeholder="First Name"
               value={formData.firstName}
               onChange={handleChange}
-              className="border-none p-2  w-[540px] h-[70px] top-[552px] left-[736px] rounded-[15px] bg-gray-200"
+              className="border-none p-3 focus:outline-[2px] focus:outline-yellow-300  w-[540px] h-[70px] top-[552px] left-[736px] rounded-[15px] bg-gray-200"
               required
             />
             <input
@@ -47,7 +47,7 @@ const ContactUs = () => {
               placeholder="Last Name"
               value={formData.lastName}
               onChange={handleChange}
-              className=" border-none  outline-3 outline-amber-300 p-2 w-[540px] h-[70px] top-[552px] left-[736px] rounded-[15px] bg-gray-200"
+              className="border-none p-3 focus:outline-[2px] focus:outline-yellow-300 p-2 w-[540px] h-[70px] top-[552px] left-[736px] rounded-[15px] bg-gray-200"
               required
             />
           </div>
@@ -58,7 +58,7 @@ const ContactUs = () => {
               placeholder="Email Address"
               value={formData.email}
               onChange={handleChange}
-              className="border-none p-2  w-[540px] h-[70px] top-[552px] left-[736px] rounded-[15px] bg-gray-200"
+              className="border-none  p-3 focus:outline-[2px] focus:outline-yellow-300  w-[540px] h-[70px] top-[552px] left-[736px] rounded-[15px] bg-gray-200"
               required
             />
             <input 
@@ -67,7 +67,7 @@ const ContactUs = () => {
               placeholder="Subject"
               value={formData.subject}
               onChange={handleChange}
-              className="border-none p-2  w-[540px] h-[70px] top-[552px] left-[736px] rounded-[15px] bg-gray-200"
+              className="border-none p-4 focus:outline-[2px] focus:outline-yellow-300  w-[540px] h-[70px] top-[552px] left-[736px] rounded-[15px] bg-gray-200"
               required
             />
           </div >
@@ -76,13 +76,13 @@ const ContactUs = () => {
             placeholder="Message"
             value={formData.message}
             onChange={handleChange}
-            className="border-none p-2  w-[1325px] h-72 rounded-[8px]  bg-gray-200 "
+            className="border-none p-3 focus:outline-[2px] focus:outline-yellow-300  w-[1325px] h-72 rounded-[8px]  bg-gray-100 "
             required
           ></textarea>
           <div className=" flex justify-center ">
             <button
               type="submit"
-              className="bg-[#3FA72F] text-white py-3 px-4  rounded-full w-[600px] h-12.5"
+              className="bg-[#ff8a00] text-white py-3 px-4  rounded-full w-[600px] h-12.5"
             >
               Submit
             </button>
