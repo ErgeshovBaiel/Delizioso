@@ -1,12 +1,12 @@
 import React from 'react'
-import CategoryFood from '../../components/category/CategoryFood'
-import CategoryButton from '../../components/CategoryButton/CategoryButton'
+import Category from '../../components/category/Category'
+import CategoryBtn from '../../components/categorybtn/CategoryBtn'
 
 const Menu = () => {
   return (
-    <div className='app-container'>
-      <CategoryFood />
-      <CategoryButton />
+    <div>
+      <Category/>
+      <CategoryBtn/>
     </div>
   )
 }

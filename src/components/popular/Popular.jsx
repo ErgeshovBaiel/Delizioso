@@ -33,8 +33,7 @@ export default function Popular () {
       }
       setFoods(data)
     } catch (error) {
-      console.log('Desserts data:', desserts);
-
+      console.error('Error fetching foods:', error)
     }
   }
 

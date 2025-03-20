@@ -1,0 +1,80 @@
+.chef-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 16px;
+    margin-top: 50px;
+  }
+  
+  .chef-title {
+    font-family: 'Tinos', serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    color: #311F09;
+  }
+  
+  .chef-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 50px;
+    justify-content: center;
+  }
+  
+  .chef-item {
+    width: 350px;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .chef-image {
+    width: 350px;
+    height: 550px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .chef-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+  }
+  
+  .chef-info {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .chef-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #311F09;
+  }
+  
+  .chef-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #a08d76;
+  }
+  
+  @media (max-width: 767px) {
+    .chef-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .chef-item {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+  
