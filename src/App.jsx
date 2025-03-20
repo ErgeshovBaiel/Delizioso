@@ -2,8 +2,11 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { menu } from './routes/Routes';
+import Cart from './components/Cart/Cart';
+
 
 const App = () => {
+  
   return (
     <Provider store={store}>
       <Router>

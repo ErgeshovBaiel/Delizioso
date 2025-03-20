@@ -6,7 +6,6 @@ const Menu = () => {
   return (
     <div className='app-container'>
       <CategoryFood />
-      <CategoryButton />
     </div>
   )
 }

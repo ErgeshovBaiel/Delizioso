@@ -1,4 +1,5 @@
 import React from 'react'
+import CategoryFood from '../category/CategoryFood'
 
 const Food = () => {
   return (
@@ -33,7 +34,6 @@ const Food = () => {
         </div>
       </div>
     </div>
-  )
-}
-
+  )}
+  
 export default Food

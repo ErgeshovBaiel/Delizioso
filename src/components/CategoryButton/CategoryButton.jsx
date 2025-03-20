@@ -3,7 +3,7 @@ const CategoryButton = ({ selectedCategory, category, onClick }) => {
         <button
             className={`
                 py-[17px]
-                px-[60px]
+                px-[50px]
                 rounded-full 
                 text-lg 
                 font-semibold 
