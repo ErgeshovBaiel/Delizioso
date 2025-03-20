@@ -2,7 +2,7 @@ const CategoryBtn = ({ selectedCategory, category, onClick }) => {
   return (
     <button
       className={`
-                w-50
+                w-45
                 h-17.5
                 rounded-full 
                 text-lg 
