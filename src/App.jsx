@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Reservation from './pages/reservation/Reservation';
 // import ReservationDetails from './pages/reservationDetails/ReservationDetail';
 import { menu } from './routes/Routes';
-import ReservationDetail from './pages/reservationDetails/ReservationDetail';
+import ReservationConfiurm from './pages/reservationConfiurm/ReservationConfiurm';
+import ReservationCancel from './pages/reservationCancel/ReservationCancel';
+// import ReservationCancel from './pages/reservationCancel/ReservationCancel';
 
 const App = () => {
   return (
@@ -14,7 +16,9 @@ const App = () => {
           {menu.map(route => (
             <Route key={route.name} path={route.path} element={route.element}>
                <Route path="/reservation" element={<Reservation/>} />
-               <Route path="/details" element={<ReservationDetail/>} />
+               {/* <Route path="/reservation-detail" element={ <ReservationDetail/>} /> */}
+               <Route path="/reservation-confiurm" element={<ReservationConfiurm/>} />
+               <Route path="/cancel" element={<ReservationCancel />} />
               {route.children?.map(child => (
                 <Route
                   key={child.path || 'index'}
@@ -32,3 +36,7 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
