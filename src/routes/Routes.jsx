@@ -2,6 +2,7 @@ import Layout from "../components/layout/Layout";
 import AboutUs from "../pages/aboutus/AboutUs";
 import HomePage from "../pages/HomePage/HomePage";
 import Menu from "../pages/menu/Menu";
+import OrderOnline from "../pages/orderonline/OrderOnline";
 
 export const menu = [
   {
@@ -20,6 +21,10 @@ export const menu = [
       {
         path: "menu",
         element: <Menu />
+      },
+      {
+        path: "order-online",
+        element: <OrderOnline />
       }
     ]
   }
