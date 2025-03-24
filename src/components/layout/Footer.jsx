@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const [activePage, setActivePage] = useState('');
+
+  useEffect(() => {
+    const savedActive = localStorage.getItem('activePage') || '/';
+    setActivePage(savedActive);
+  }, []);
+
+  const handleNavClick = (path) => {
+    localStorage.setItem('activePage', path);
+    setActivePage(path); 
+    navigate(path);
+  };
+
   return (
     <div className='w-full bg-[#311F09] mt-20 py-10 px-5 relative top-100'>
       <div className='max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between'>
-        <div className='flex flex-col items-start  md:text-left'>
+        <div className='flex flex-col items-start md:text-left'>
           <div className='flex items-center gap-4'>
             <div className='w-[51px] h-[51px] flex items-center justify-center rounded-full bg-[#FF8A00]'>
               <h1 className='text-white text-[25px] font-semibold'>D</h1>
@@ -34,17 +49,30 @@ const Footer = () => {
           <div>
             <h3 className='text-[#FF8A00] text-[20px] font-semibold'>Page</h3>
             <ul className='text-[#E3E2E0] text-[16px] mt-3 space-y-2'>
-              <li>Home</li>
-              <li>Menu</li>
-              <li>Order online</li>
-              <li>Catering</li>
-              <li>Reservation</li>
+              {['/', '/menu', '/order-online', '/reservation'].map((path, index) => (
+                <li
+                  key={index}
+                  className={`cursor-pointer transition duration-300 ${
+                    activePage === path ? 'text-[#FF8A00] font-semibold' : ''
+                  }`}
+                  onClick={() => handleNavClick(path)}
+                >
+                  {path === '/' ? 'Home' : path.replace('/', '').replace('-', ' ')}
+                </li>
+              ))}
             </ul>
           </div>
           <div>
             <h3 className='text-[#FF8A00] text-[20px] font-semibold'>Information</h3>
             <ul className='text-[#E3E2E0] text-[16px] mt-3 space-y-2'>
-              <li>About us</li>
+              <li
+                className={`cursor-pointer transition duration-300 ${
+                  activePage === '/about-us' ? 'text-[#FF8A00] font-semibold' : ''
+                }`}
+                onClick={() => handleNavClick('/about-us')}
+              >
+                About us
+              </li>
               <li>Testimonial</li>
               <li>Event</li>
             </ul>
@@ -54,13 +82,13 @@ const Footer = () => {
             <ul className='text-[#E3E2E0] text-[16px] mt-3 space-y-2'>
               <li>3247 Johnson Ave, Bronx, NY 10463</li>
               <li>delizioso@gmail.com</li>
-              <li>+123 4567 8901</li>
+              <li>+996 555 84 34 71</li>
             </ul>
           </div>
         </div>
       </div>
       <p className='text-[#E3E2E0] text-center text-[16px] mt-10'>
-        Copyright &copy; 2022 Delizioso
+        Copyright &copy; 2025 Delizioso
       </p>
     </div>
   );

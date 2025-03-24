@@ -24,12 +24,11 @@ const Reservation = () => {
       return;
     }
     setIsOpenModal(true)
-    // navigate('/reservation-detail', { state: { date, time, partySize } });
   };
 
   return (
-    <div className="">
-      <div className="app-container mx-auto flex items-start">
+    <div className="w-350 m-auto">
+      <div className="mx-auto flex items-start">
         <div>
           <img src={Image} alt="Restaurant table" className="w-[600px] relative left-[-120px]" />
         </div>

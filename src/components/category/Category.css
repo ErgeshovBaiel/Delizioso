@@ -4,12 +4,31 @@
   padding: 20px;
   margin-top: 164px;
 }
-
+.cart-button {
+  width: 250px;
+  height: 55px;
+  padding-left: 30px;
+  border-radius: 50px;
+  background: #FF8A00;
+  color: white;
+  position: relative;
+  bottom: 100px;
+  left: 100px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 .title {
   font-size: 80px;
   font-weight: bold;
   color: #311F09;
   text-align: center;
+  font-family: 'Tinos', sans-serif;
 }
 
 .category-buttons {
@@ -61,7 +80,7 @@
 
 .food-item.ordered .order-button {
   background: white;
-  color: black;
+  color: #FF8A00;
 }
 
 .food-image {
@@ -80,7 +99,7 @@
 }
 
 .food-description {
-  font-size: 14px;
+  font-size: 15px;
   color: #59442B;
   text-align: center;
   margin-top: 20px;
@@ -102,18 +121,13 @@
   width: 156px;
   height: 55px;
   border-radius: 50px;
-  background: rgb(254, 166, 2);
+  background: #FF8A00;
   color: white;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   border: none;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.order-button:hover {
-  background: darkorange;
-  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -150,5 +164,28 @@
   .food-image {
     width: 100%;
     height: auto;
+  }
+  .order-button {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    background: #FF8A00;
+    color: white;
+    font-size: 24px; /* Плюс жана галочканы көрсөтүү үчүн чоңураак өлчөм */
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+@media (min-width: 481px) {
+  .order-button {
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    font-size: 18px;
   }
 }

@@ -1,15 +1,17 @@
 import React from 'react'
-import Header from '../header/Header'
-import { Outlet } from 'react-router-dom'
-import Footer from '../footer/Footer'
-
+import Header from './Header'
+import { Outlet, useLocation } from 'react-router-dom'
+import Footer from './Footer'
 
 const Layout = () => {
+  const location = useLocation();
+  const hideHeaderFooter = location.pathname === "/login" || location.pathname === "/signup";
+
   return (
     <div>
-      <Header />
+      {!hideHeaderFooter && <Header />}
       <Outlet />
-      <Footer />
+      {!hideHeaderFooter && <Footer />}
     </div>
   )
 }

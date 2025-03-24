@@ -1,30 +1,31 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Table = () => {
+  const { t } = useTranslation()
+
   return (
     <div className='w-full min-h-[1056px] bg-[#fcf5ec] flex flex-col items-center py-20 px-6 md:px-16'>
-      <div className='w-full max-w-[1400px] flex flex-col md:flex-col lg:flex-row
-       items-center md:items-center lg:items-start gap-12.5 relative md:left-25 md:top-25'>
-        
+      <div
+        className='w-full max-w-[1400px] flex flex-col md:flex-col lg:flex-row
+       items-center md:items-center lg:items-start gap-12.5 relative md:left-25 md:top-25'
+      >
         <div className='md:text-left max-w-[700px] relative md:left-200 md:top-30 md:order-1 lg:order-none'>
           <h1 className='text-[40px] md:text-[80px] text-[#3b2b17] font-[Tinos] font-bold leading-[1.1]'>
-            Let's reserve
+            {t('let')}
           </h1>
           <h1 className='text-[#FF8A00] text-[40px] md:text-[80px] font-[Tinos] font-bold leading-[1.1]'>
-            a table
+            {t('table')}
           </h1>
           <p className='text-[16px] md:text-[20px] text-[#5C4529] mt-12.5 leading-[1.8]'>
-            Ready to savor the flavors of Italy with us? Secure your spot at{' '}
-            <span className='text-[#ff8a00]'>Delizioso</span> by making a
-            reservation today. Whether it's a romantic dinner for two or a
-            lively gathering with friends, we're here to make your dining
-            experience memorable.
+            {t('ready')} <span className='text-[#ff8a00]'>Delizioso</span>{' '}
+            {t('making')}
           </p>
           <button
             className='md:px-12 md:py-4 px-7.5 py-4 rounded-full bg-[#FF8A00] 
-            text-white text-[14px] md:text-[20px] font-[Poppins] font-semibold mt-13.25'
+            text-white text-[14px] md:text-[20px] font-semibold mt-13.25'
           >
-            Reservation
+            {t('reser')}
           </button>
         </div>
         <div className='relative flex flex-col items-center lg:right-180 md:order-2 lg:order-none'>

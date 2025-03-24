@@ -4,6 +4,7 @@ import HomePage from "../pages/HomePage/HomePage";
 import Menu from "../pages/menu/Menu";
 import ContactUs from "../pages/contactUs/Contact"
 import OrderOnline from "../pages/orderonline/OrderOnline";
+import Cart from "../cart/Cart";
 
 export const menu = [
   {
@@ -30,6 +31,10 @@ export const menu = [
       {
         path: "order-online",
         element: <OrderOnline />
+      },
+      {
+        path: "cart",
+        element: <Cart />
       }
     ]
   }

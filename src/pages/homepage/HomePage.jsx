@@ -3,11 +3,10 @@ import Hero from "../../components/hero/Hero";
 import Food from "../../components/food/Food";
 import Table from "../../components/table/Table";
 import Open from "../../components/open/Open";
-import Popular from "../../components/popular/Popular";
 import { supabase } from "../../supabase";
 import Chef from "../../components/chef/Chef";
 import Customers from "../../components/customers/Customers";
-import Category from "../../components/category/Category";
+import Popular from "../../components/popular/Popular";
 
 const HomePage = () => {
   const [povar, setPovar] = useState([]);
@@ -38,12 +37,11 @@ const HomePage = () => {
     <div className='app-container'>
       <Hero />
       <Food />
-      <Category />
+      <Popular />
       <Table />
       <Chef />
       <Customers />
       <Open />
-      <img src="" alt="" />
     </div>
   );
 };

@@ -16,7 +16,7 @@ const ReservationCancel = () => {
     };
 
     return (
-        <div className='app-container'>
+        <div className='w-350 m-auto'>
             <div className="flex items-center gap-6 w-full px-10 py-4 bg-white">
                 <div className="flex items-center">
                     <div className="w-[51px] h-[51px] rounded-full bg-[#FF8A00] flex items-center justify-center">
