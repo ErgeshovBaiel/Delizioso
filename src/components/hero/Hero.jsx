@@ -1,8 +1,18 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+
+  const handleOrderClick = () => {
+    navigate('/order-online')
+  }
+
+  const handleReservationClick = () => {
+    navigate('/reservation')
+  }
 
   return (
     <div className='max-w-[1400px] mx-auto flex-col md:flex-row mt-41.5 md:mt-30 px-4 md:px-0 flex'>
@@ -19,14 +29,16 @@ const Hero = () => {
         </p>
         <div className='flex gap-5 md:gap-6 mt-[78px]'>
           <div
+            onClick={handleOrderClick}
             className='block w-max mb-10 md:mb-10 bg-[#FF8A00] text-white text-[14px] md:text-[20px]
-            font-semibold rounded-full px-7.5 py-4 md:px-12 md:py-4'
+  font-semibold rounded-full px-7.5 py-4 md:px-12 md:py-4 cursor-pointer'
           >
             {t('order')}
           </div>
           <div
+            onClick={handleReservationClick}
             className='block w-max mb-10 md:mb-10 bg-[#3FA72F] text-white text-[14px] md:text-[20px]
-            font-semibold rounded-full px-7.5 py-4 md:px-12 md:py-4'
+  font-semibold rounded-full px-7.5 py-4 md:px-12 md:py-4 cursor-pointer'
           >
             {t('reser')}
           </div>

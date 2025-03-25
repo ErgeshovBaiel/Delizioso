@@ -1,8 +1,14 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 
 const Table = () => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/reservation')
+  }
 
   return (
     <div className='w-full min-h-[1056px] bg-[#fcf5ec] flex flex-col items-center py-20 px-6 md:px-16'>
@@ -22,8 +28,9 @@ const Table = () => {
             {t('making')}
           </p>
           <button
+            onClick={handleClick}
             className='md:px-12 md:py-4 px-7.5 py-4 rounded-full bg-[#FF8A00] 
-            text-white text-[14px] md:text-[20px] font-semibold mt-13.25'
+            text-white text-[14px] md:text-[20px] font-semibold mt-13.25 cursor-pointer'
           >
             {t('reser')}
           </button>

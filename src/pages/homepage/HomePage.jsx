@@ -34,7 +34,7 @@ const HomePage = () => {
   }
 
   return (
-    <div className='app-container'>
+    <div className='pt-25'>
       <Hero />
       <Food />
       <Popular />

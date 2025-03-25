@@ -1,10 +1,19 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-
+import { useNavigate } from 'react-router-dom'
 
 const Open = () => {
-    const { t } = useTranslation()
-  
+  const { t } = useTranslation()
+  const navigate = useNavigate()
+
+  const handleOrderClick = () => {
+    navigate('/order-online')
+  }
+
+  const handleReservationClick = () => {
+    navigate('/reservation')
+  }
+
   return (
     <div className='w-full max-w-[1400px] flex justify-center mx-auto px-4 relative top-50'>
       <div
@@ -18,35 +27,35 @@ const Open = () => {
         />
         <div className='absolute md:bottom-15 bottom-40 inset-0 flex flex-col items-center justify-center text-center text-white '>
           <h1 className='md:w-[650px] w-[185px] text-[40px] md:text-[80px] font-bold font-[Tinos] relative md:bottom-15 -bottom-10'>
-          {t('from')}
+            {t('from')}
           </h1>
           <h3 className='md:w-[600px] w-[180px] text-xl md:text-[40px] font-semibold relative md:bottom-7.5 -bottom-15'>
-          {t('Mond')}
+            {t('Mond')}
           </h3>
           <div className='relative md:top-0 top-17'>
-          <p className='text-[15px] md:text-xl font-normal'>
-          {t('Sun')}
-          </p>
-          <p className='text-[15px] md:text-xl font-normal  mt-2'>
-          {t('Din')}
-          </p>
-          <p className='text-[15px] md:text-xl font-normal  mt-2'>
-          {t('Pm')}
-          </p>
+            <p className='text-[15px] md:text-xl font-normal'>{t('Sun')}</p>
+            <p className='text-[15px] md:text-xl font-normal  mt-2'>
+              {t('Din')}
+            </p>
+            <p className='text-[15px] md:text-xl font-normal  mt-2'>
+              {t('Pm')}
+            </p>
           </div>
           <div className='flex flex-col sm:flex-row gap-2.5 relative md:top-25 top-20 '>
             <button
+              onClick={handleOrderClick}
               className='md:px-12 md:py-4 px-7.5 py-4 rounded-full bg-[#FF8A00] text-white text-[14px] 
-              md:text-[20px]  font-semibold'
+  md:text-[20px] font-semibold cursor-pointer'
             >
-            {t('order')}
-
+              {t('order')}
             </button>
+
             <button
+              onClick={handleReservationClick}
               className='md:px-12 md:py-4 px-7.5 py-4 rounded-full bg-white text-[#311F09] text-[14px] 
-              md:text-[20px]  relative font-semibold'
+  md:text-[20px] font-semibold cursor-pointer'
             >
-            {t('reser')}
+              {t('reser')}
             </button>
           </div>
         </div>

@@ -5,8 +5,9 @@ import { CartContext } from '../../context/CartContext'
 import '../category/Category.css'
 import { useTranslation } from 'react-i18next'
 import { FaPlus, FaCheck } from 'react-icons/fa6'
+import { useNavigate } from 'react-router-dom' // Import useNavigate
 
-export default function Category () {
+export default function Order () {
   const { t } = useTranslation()
   const storedCategory =
     localStorage.getItem('selectedCategory') || 'All category'
@@ -16,6 +17,8 @@ export default function Category () {
   const [orderStatus, setOrderStatus] = useState({})
 
   const { addToCart, cartItems } = useContext(CartContext)
+
+  const navigate = useNavigate() // Initialize useNavigate
 
   const categoryTableMap = {
     Dinner: 'dinner',
@@ -68,7 +71,6 @@ export default function Category () {
           data = categoryData || []
         }
       }
-
       setFoods(data)
     } catch (error) {
       console.error('Ошибка при получении еды:', error.message)
@@ -105,7 +107,8 @@ export default function Category () {
   }
 
   const handleOrderClick = food => {
-    addToCart(food)
+    addToCart(food) // Add item to the cart
+    navigate('/cart') // Navigate to the cart page
   }
 
   const isItemInCart = food => cartItems.some(item => item.id === food.id)
@@ -139,9 +142,7 @@ export default function Category () {
           foods.map(food => (
             <div
               key={food.id}
-              className={`food-item ${
-                orderStatus[food.uniqueId] ? 'ordered' : ''
-              }`}
+              className={`food-item ${orderStatus[food.uniqueId] ? 'ordered' : ''}`}
             >
               <div className='food-content'>
                 <img
@@ -156,9 +157,7 @@ export default function Category () {
                     ${food.price}
                   </p>
                   <button
-                    className={`order-button ${
-                      isItemInCart(food) ? 'bg-[#FF8A00] text-white' : ''
-                    }`}
+                    className={`order-button ${isItemInCart(food) ? 'bg-[#FF8A00] text-white' : ''}`}
                     onClick={() => handleOrderClick(food)}
                     disabled={orderStatus[food.uniqueId]}
                   >

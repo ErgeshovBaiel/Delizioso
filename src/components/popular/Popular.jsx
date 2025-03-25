@@ -4,20 +4,18 @@ import CategoryBtn from '../categorybtn/CategoryBtn'
 import { CartContext } from '../../context/CartContext'
 import '../category/Category.css'
 import { useTranslation } from 'react-i18next'
-import { HiOutlineTrash } from 'react-icons/hi2'
-import { FaPlus } from 'react-icons/fa6'
-import { FaCheck } from 'react-icons/fa6'
+import { FaPlus, FaCheck } from 'react-icons/fa6'
 
 export default function Category () {
   const { t } = useTranslation()
   const storedCategory =
-    localStorage.getItem('selectedCategory') || 'All catagory'
+    localStorage.getItem('selectedCategory') || 'All category'
   const [selectedCategory, setSelectedCategory] = useState(storedCategory)
   const [categories, setCategories] = useState([])
   const [foods, setFoods] = useState([])
   const [orderStatus, setOrderStatus] = useState({})
 
-  const { addToCart } = useContext(CartContext)
+  const { addToCart, cartItems } = useContext(CartContext)
 
   const categoryTableMap = {
     Dinner: 'dinner',
@@ -31,7 +29,7 @@ export default function Category () {
     try {
       let data = []
 
-      if (categoryId === 'All catagory') {
+      if (categoryId === 'All category') {
         const { data: dinner } = await supabase.from('dinner').select('*')
         const { data: lunch } = await supabase.from('lunch').select('*')
         const { data: pizza } = await supabase.from('pizza').select('*')
@@ -61,7 +59,7 @@ export default function Category () {
           }))
         ]
       } else {
-        const table = categoryTableMap[selectedCategory]
+        const table = categoryTableMap[categoryId]
         if (table) {
           const { data: categoryData, error } = await supabase
             .from(table)
@@ -94,7 +92,8 @@ export default function Category () {
   }, [])
 
   useEffect(() => {
-    const savedOrderStatus = JSON.parse(localStorage.getItem('orderStatus')) || {}
+    const savedOrderStatus =
+      JSON.parse(localStorage.getItem('orderStatus')) || {}
     setOrderStatus(savedOrderStatus[selectedCategory] || {})
 
     getFoods(selectedCategory)
@@ -106,16 +105,11 @@ export default function Category () {
   }
 
   const handleOrderClick = food => {
-    const updatedOrderStatus = { ...orderStatus, [food.uniqueId]: !orderStatus[food.uniqueId] }
-
-    const allOrderStatus = JSON.parse(localStorage.getItem('orderStatus')) || {}
-    allOrderStatus[selectedCategory] = updatedOrderStatus
-    localStorage.setItem('orderStatus', JSON.stringify(allOrderStatus))
-
-    setOrderStatus(updatedOrderStatus)
     addToCart(food)
   }
 
+  const isItemInCart = food => cartItems.some(item => item.id === food.id)
+  
   const handleCartClick = () => {
     setOrderStatus({})
     const allOrderStatus = JSON.parse(localStorage.getItem('orderStatus')) || {}
@@ -130,7 +124,7 @@ export default function Category () {
       </div>
 
       <div className='category-buttons'>
-        {['All catagory', ...categories.map(cat => cat.name)].map(category => (
+        {['All category', ...categories.map(cat => cat.name)].map(category => (
           <CategoryBtn
             key={category}
             onClick={() => handleCategoryChange(category)}
@@ -144,8 +138,10 @@ export default function Category () {
         {foods.length > 0 ? (
           foods.map(food => (
             <div
-              key={food.uniqueId}
-              className={`food-item ${orderStatus[food.uniqueId] ? 'ordered' : ''}`}
+              key={food.id}
+              className={`food-item ${
+                orderStatus[food.uniqueId] ? 'ordered' : ''
+              }`}
             >
               <div className='food-content'>
                 <img
@@ -160,11 +156,13 @@ export default function Category () {
                     ${food.price}
                   </p>
                   <button
-                    className={`order-button ${orderStatus[food.uniqueId] ? 'bg-[#FF8A00] text-white' : ''}`}
+                    className={`order-button ${
+                      isItemInCart(food) ? 'bg-[#FF8A00] text-white' : ''
+                    }`}
                     onClick={() => handleOrderClick(food)}
                     disabled={orderStatus[food.uniqueId]}
                   >
-                    {orderStatus[food.uniqueId] ? (
+                    {isItemInCart(food) ? (
                       <span className='hidden md:block'>Added</span>
                     ) : (
                       <span className='hidden md:block'>Order now</span>
@@ -182,13 +180,10 @@ export default function Category () {
             </div>
           ))
         ) : (
-          <p>NULL</p>
+          <p>{t('noFood')}</p>
         )}
       </div>
-
-      <button className='cart-button' onClick={handleCartClick}>
-        {t('trash')}
-        <HiOutlineTrash className='text-xl cursor-pointer' />
+      <button  onClick={handleCartClick}>
       </button>
     </div>
   )

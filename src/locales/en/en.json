@@ -24,5 +24,20 @@
   "Sun": "Launch: Mon-Sun - 11:00am-02:00pm",
   "Din": "Dinner: Sunday - 04:00pm-08:00pm",
   "Pm": "04:00pm-09:00pm",
-  "cart": "clear cart "
+  "cart": "clear cart ",
+  "Home":"Home",
+  "Menu": "Menu",
+  "About us": "About us",
+  "Order online": "Order online",
+  "Contact us":"Contact us",
+  "Reservation":"Reservation",
+  "Oures":"Our",
+  "Oures2":"restaurant",
+  "culinary":"a culinary oasis nestled in the vibrant heart of downtown Verona. Founded in 2015 by Italian-born restaurateur Ismail Marzuki, Luce Notte has quickly become a beloved fixture in the local dining scene, captivating guests with its irresistible blend of traditional flavors and contemporary flair.",
+  "At":"At",
+  "take":"we take pride in delivering an unparalleled dining experience from start to finish. Our menu features a tantalizing array of authentic Italian dishes crafted from the finest locally-sourced ingredients, including handcrafted pastas, succulent seafood, and decadent desserts.",
+  "Owner":"Owner",
+  "Executive":" & Executive Chef ",
+  "Marzuki":"Ismail Marzuki",
+  "Culinary":"Culinary artistry begins with a vision, flourishes with dedication, and shines with passion. As a restaurant owner, I am privileged to orchestrate this symphony of flavors, creating unforgettable experiences one dish at a time."
 }

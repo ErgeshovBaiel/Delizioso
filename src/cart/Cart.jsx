@@ -23,16 +23,16 @@ export default function Cart () {
   )
   
   return (
-    <div className='w-350 m-auto mt-20'>
+    <div className='w-350 m-auto mt-50'>
       <Header />
-      <div className='flex items-center justify-end relative bottom-10'>
+      <div className='flex items-center justify-end relative '>
         <button className='flex gap-5 font-[inter] font-medium text-xl' onClick={clearCart}>
           <HiOutlineTrash className='text-green-500 text-2xl cursor-pointer mr-2.5 mt-0.5' />
           {t('cart')}
         </button>
       </div>
       {cartItems.length > 0 ? (
-        <div className='w-350  flex-wrap flex gap-25'>
+        <div className='w-350  flex-wrap flex gap-25 mt-10'>
           {cartItems.map((item, index) => (
             <div key={index} className='cart-item'>
               <img

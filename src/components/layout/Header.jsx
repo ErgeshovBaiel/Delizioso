@@ -31,12 +31,21 @@ const Header = () => {
     }
   }, [])
 
-  const handleNavClick = item => {
-    setActive(item)
+  const handleNavClick = (item) => {
+    setActive(item.name)
     setMenuOpen(false)
-    localStorage.setItem('activePage', item)
-    navigate(item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`)
+    localStorage.setItem('activePage', item.name)
+    navigate(item.link === 'Home' ? '/' : `/${item.link.toLowerCase().replace(/\s/g, '-')}`)
   }
+
+  const menuItems = [
+    { name: 'Home', link: 'Home' },
+    { name: 'Menu', link: 'Menu' },
+    { name: 'About us', link: 'About-us' },
+    { name: 'Order online', link: 'Order-online' },
+    { name: 'Reservation', link: 'Reservation' },
+    { name: 'Contact us', link: 'Contact-us' }
+  ]
 
   return (
     <div className='w-full fixed top-0 left-0 z-50 bg-white shadow-md'>
@@ -53,29 +62,20 @@ const Header = () => {
         </div>
 
         <ul className='hidden lg:flex gap-15'>
-          {[
-            'Home',
-            'Menu',
-            'About us',
-            'Order online',
-            'Reservation',
-            'Contact us'
-          ].map((item, index) => (
+          {menuItems.map((item, index) => (
             <li
               key={index}
               className={`cursor-pointer hover:text-[#FF8A00] text-[#311F09]
-                 font-[Poppins] font-normal text-[16px] transition leading-[100%] 
-                ${active === item ? 'text-[#FF8A00]' : ''}`}
+                  font-normal text-[17px] transition leading-[100%] 
+                ${active === item.name ? 'text-[#FF8A00]' : ''}`}
               onClick={() => handleNavClick(item)}
             >
-              {item}
+              {t(item.name)}
             </li>
           ))}
         </ul>
-        <div
-          className='relative group cursor-pointer transition-transform duration-500 
-           hover:scale-105 '
-        >
+        
+        <div className='relative group cursor-pointer transition-transform duration-500 hover:scale-105'>
           <p
             className='font-medium md:text-[12px] md:w-10 md:h-6.25 text-[10px] w-8 h-5 rounded-4xl text-white 
             bg-[#FF8A00] md:pl-3 pl-2.25 pt-0.75 relative md:left-5 left-4.5 top-1  z-40'
@@ -88,6 +88,7 @@ const Header = () => {
             onClick={changeLanguage}
           />
         </div>
+
         <div className='flex items-center gap-6'>
           <NavLink to='/cart' className='relative md:left-0 left-5'>
             <div className='w-11.5 h-11.5 rounded-full bg-[#f5f4f4] flex items-center justify-center relative'>
@@ -107,43 +108,22 @@ const Header = () => {
               <h2 className='text-white text-[17px] font-semibold'>Log in</h2>
             </div>
           </NavLink>
-          <button
-            className='md:hidden cursor-pointer'
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? (
-              <AiOutlineClose size={28} />
-            ) : (
-              <AiOutlineMenu size={28} />
-            )}
+          <button className='md:hidden cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />}
           </button>
         </div>
       </div>
 
       {menuOpen && (
         <ul className='md:hidden absolute top-20 left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-4'>
-          {[
-            'Home',
-            'Menu',
-            'About us',
-            'Order online',
-            'Reservation',
-            'Contact us'
-          ].map((item, index) => (
-            <li
-              key={index}
-              className='w-full text-center py-2 border-b cursor-pointer hover:text-[#FF8A00]'
-            >
+          {menuItems.map((item, index) => (
+            <li key={index} className='w-full text-center py-2 border-b cursor-pointer hover:text-[#FF8A00]'>
               <NavLink
-                to={
-                  item === 'Home'
-                    ? '/'
-                    : `/${item.toLowerCase().replace(' ', '-')}`
-                }
+                to={item.link === 'Home' ? '/' : `/${item.link.toLowerCase().replace(/\s/g, '-')}`}
                 className={({ isActive }) => (isActive ? 'text-[#FF8A00]' : '')}
                 onClick={() => handleNavClick(item)}
               >
-                {item}
+                {t(item.name)}
               </NavLink>
             </li>
           ))}

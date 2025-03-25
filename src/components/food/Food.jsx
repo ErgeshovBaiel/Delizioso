@@ -1,8 +1,14 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 
 const Food = () => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/menu')
+  }
 
   return (
     <div className='w-full h-auto md:h-[967px] bg-[#e0f5e7] pt-20 md:pt-40 mt-20 md:mt-40'>
@@ -23,15 +29,16 @@ const Food = () => {
             delizioso
           </h1>
           <p className='text-[16px] md:text-[20px] text-[#5C4529] mt-8 md:mt-15 leading-[1.8] max-w-[600px]'>
-            {t('Benven')}{' '}
-            <span className='text-[#ff8a00]'>Delizioso</span> , {t('aroma')}
+            {t('Benven')} <span className='text-[#ff8a00]'>Delizioso</span> ,{' '}
+            {t('aroma')}
           </p>
           <div className='mt-8 md:mt-25'>
             <button
+              onClick={handleClick}
               className='md:px-12 md:py-4 px-7.5 py-4 rounded-full bg-[#FF8A00] 
-            text-white text-[14px] md:text-[20px]  font-semibold'
+            text-white text-[14px] md:text-[20px]  font-semibold cursor-pointer'
             >
-            {t("menu")}
+              {t('menu')}
             </button>
           </div>
         </div>

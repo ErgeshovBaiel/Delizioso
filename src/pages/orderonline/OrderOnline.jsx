@@ -1,10 +1,10 @@
 import React from 'react'
-import Category from '../../components/category/Category'
+import Order from '../../components/order/Order'
 
 const OrderOnline = () => {
   return (
     <div>
-      <Category />
+      <Order />
     </div>
   )
 }
