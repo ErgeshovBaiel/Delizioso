@@ -7,7 +7,7 @@ import {
 } from 'react-icons/ai'
 import { SlGlobe } from 'react-icons/sl'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { CartContext } from '../../context/CartContext'
+import { CartContext } from '../../../context/CartContext'
 
 const Header = () => {
   const { t, i18n } = useTranslation()

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import '../cart/Cart.css'
-import Header from '../components/layout/Header'
+import Header from '../components/layout/header/Header'
 import { FiMinus, FiPlus } from 'react-icons/fi'
 import { HiOutlineTrash } from 'react-icons/hi2'
 import { useTranslation } from 'react-i18next'

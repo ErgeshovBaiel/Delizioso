@@ -80,7 +80,7 @@ const SignUp = () => {
       </div>
       <div className='w-1/2 h-screen overflow-hidden'>
         <img
-          src='https://lucenotte.com/static/media/signup.0bf631e1364d0a5bfbed.webp'
+          src='https://sun6-20.userapi.com/ukbr3PbmUMrznyLhsACGC8AUbOzjrtjtZQHgaw/kO_5bWbnFcs.jpg'
           alt='Sign Up'
           className='w-full h-full object-cover pointer-events-none select-none'
         />

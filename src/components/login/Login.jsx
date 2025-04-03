@@ -76,7 +76,7 @@ const Login = () => {
       </div>
       <div className='w-1/2'>
         <img
-          src='https://lucenotte.com/static/media/login.16cbaaa2fb1722a1d7e4.webp'
+          src='https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=720&h=492'
           alt='Login'
           className='w-full h-full object-cover'
         />
